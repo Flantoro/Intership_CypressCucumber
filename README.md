@@ -13,4 +13,4 @@
 - Open VS code terminal and clone repository `https://github.com/Flantoro/Intership_CypressCucumber`
 - Install Cypress using `npm install cypress --save-dev`
 - Run in terminal `npm i` to install all you needed
-- Enter `npm run cy:open` to run tests
+- Enter `npm run cy:open` to run tests 
