@@ -12,11 +12,6 @@ Scenario: Validation error message shown after registration details filled with 
     And User checks Terms and Conditions checkbox
     And User clicks Submit button
     Then Min Lenght password validation message is visible
- 
-Scenario: The conditions header shown on the "Terms & Conditions" page
-    When User clicks SignUp button
-    And User clicks Terms and Conditions button
-    Then Terms and Conditions title is visible
 
 Scenario: Validation errors shown if no credentials entered in Sign Up form
     When User clicks SignUp button
@@ -26,6 +21,11 @@ Scenario: Validation errors shown if no credentials entered in Sign Up form
     And Last Name validation message is visible
     And Password validation message is visible
     And Terms and Conditions validation message is visible
+ 
+Scenario: The conditions header shown on the "Terms & Conditions" page
+    When User clicks SignUp button
+    And User clicks Terms and Conditions button
+    Then Terms and Conditions title is visible
 
 Scenario: Validation error message shown after registration details filled except email
     When User clicks SignUp button
