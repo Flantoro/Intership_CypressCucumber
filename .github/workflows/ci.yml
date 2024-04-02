@@ -1,0 +1,20 @@
+name: End-to-end tests
+on: [push]
+
+jobs:
+    cypress-e2e:
+        runs-on: ubuntu-latest
+        container: cypress/browsers:latest
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Run Cypress tests
+              uses: cypress-io/github-action@v2
+              with:
+                  command: npm run cy:tests-with-allure-headless
+
+            - name: Generate Allure Report
+              uses: simple-elf/allure-report-action@master
+              if: always()
+              with:
+                  allure_results: allure-results
