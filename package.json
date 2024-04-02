@@ -1,5 +1,5 @@
 {
-	"name": "Intership_Cypress-Cucumber",
+	"name": "Intership_CypressCucumber",
 	"version": "1.0.0",
 	"description": "AQA tests for Telnyx website",
 	"main": "index.js",
