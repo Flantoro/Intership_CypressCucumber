@@ -1,16 +1,7 @@
 import { When, Then, Given } from "@badeball/cypress-cucumber-preprocessor";
-import MainPage from "../pages/MainPage";
 import SignUpPage from "../pages/SignUpPage";
 import RandomData from "../helpers/RandomData";
 
-Given("Main page is opened", () => {
-	cy.visit('/')
-    MainPage.clickAcceptCookies();
-});
-
-When("User clicks SignUp button", () => {
-	MainPage.clickSignUpButton();
-});
 // Scenario Validation error message shown after registration details filled with 11 chars password
 
 When("User fills Email input", () => {
