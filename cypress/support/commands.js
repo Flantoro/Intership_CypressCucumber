@@ -23,9 +23,9 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-Cypress.Commands.add("visitAndAcceptCookies", (urlAddress) => {
-	//visit
-	cy.visit(urlAddress);
-	//accept cookies
-	cy.get("#onetrust-accept-btn-handler").click();
-});
+// Cypress.Commands.add("visitAndAcceptCookies", (urlAddress) => {
+// 	//visit
+// 	cy.visit(urlAddress);
+// 	//accept cookies
+// 	cy.get("#onetrust-accept-btn-handler").click();
+// });
