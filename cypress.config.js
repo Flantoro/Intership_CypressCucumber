@@ -24,6 +24,11 @@ module.exports = defineConfig({
 		env: {
 			allureReuseAfterSpec: true,
 		},
+
+		retries: {
+			runMode: 2,
+			openMode: 0
+		},
 		viewportWidth: 1920,
 		viewportHeight: 1080,
 	},
