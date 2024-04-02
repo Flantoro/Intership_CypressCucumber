@@ -13,16 +13,20 @@ jobs:
               with:
                   command: npm run cy:tests-with-allure-headless
 
-            - name: Generate Allure Report
+            - name: Build test report
               uses: simple-elf/allure-report-action@master
               if: always()
+              id: allure-report
               with:
-                  allure_results: allure-results
-                  
+                   allure_results: build/allure-results
+                   gh_pages: gh-pages
+                   allure_report: allure-report
+                   allure_history: allure-history
+                
             - name: Deploy report to Github Pages
               if: always()
               uses: peaceiris/actions-gh-pages@v2
               env:
-                  PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                  PUBLISH_BRANCH: allure-report
-                  PUBLISH_DIR: allure-report
+                    PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                    PUBLISH_BRANCH: gh-pages
+                    PUBLISH_DIR: allure-history
