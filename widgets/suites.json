@@ -1,1 +1,1 @@
-{"total":0,"items":[]}
+{"total":2,"items":[{"uid":"34aeda5bad9d1b100009b9a8a4ae8c64","name":"Edge Page","statistic":{"failed":3,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":3}},{"uid":"6dc15867cf9ca7b36859869c45b98385","name":"Contact Us Page","statistic":{"failed":0,"broken":0,"skipped":0,"passed":2,"unknown":0,"total":2}}]}
