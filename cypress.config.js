@@ -24,6 +24,8 @@ module.exports = defineConfig({
 		env: {
 			allureReuseAfterSpec: true,
 		},
+
+	headed: false,
     retries: {
       runMode: 2,
       openMode: 0
