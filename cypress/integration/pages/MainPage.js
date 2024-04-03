@@ -1,50 +1,15 @@
 class MainPage {
 
-    get getAcceptCookies(){
-        return cy.get('[id="onetrust-accept-btn-handler"]');
-    }
-    get getSolutionsButton(){
-        return cy.get('[href="/solutions"]').first();
-    }
-    get getContactUsButton(){
-        return cy.get('[href="/contact-us"]');
-    }
-    get getSignUpButton(){
-        return cy.get('[id="header-sign-up"]');
-    }
-    get getEmailInput(){
-        return cy.get('[id="email"]');
-    }
-    get getBottomSignUpButton(){
-        return cy.get('[action="/sign-up"] button');
-    }
-
-    get getExploreText(){
-        return cy.get('[action="/sign-up"]');
-    }
-
-    get getTelnyxVSTwilioButton(){
-        return cy.get('[href="/the-better-twilio-alternative"]');
-    }
-
-    get getEdgeButton(){
-        return cy.get('[href="/resources/about-edge-connectivity"]');
-    }
-
-    get getGlobalCoverageButton(){
-        return cy.get('footer [href="/global-coverage"]');
-    }
-
     get getDownloadFullCoverageText(){
         return cy.get('main div div div p').first();
     }
 
-    get getOurNetworkButton(){
-        return cy.get('footer [href="/our-network"]');
+    get getOurNetworkFeauresSection(){
+        return cy.get('[contenttype="sectionTextCards"]');
     }
 
-    get getOurNetworkFeaturesSection(){
-        return cy.get('[contenttype="sectionTextCards"]');
+    get getResourcesButton(){
+        return cy.get('[id="radix-:Rmljm:"]');
     }
 
     get getComparePricingSection(){
@@ -55,72 +20,76 @@ class MainPage {
         this.getComparePricingSection.scrollIntoView();
     }
 
+    clickResourcesButton(){
+        this.getResourcesButton.realClick();
+    }
+
+    clickArticleButton(){
+        cy.get('[href="/resources/enterprise-cloud-data-storage"]').click();
+    }
+
+    clickBlogButton(){
+        cy.get('[href="/resources"]').first().click();
+    }
+
     scrollToOurNetworkFeaturesSection(){
-        this.getOurNetworkFeaturesSection.scrollIntoView();
+        this.getOurNetworkFeauresSection.scrollIntoView();
     }
 
     scrollToOurNetworkButton(){
-        this.getOurNetworkButton.scrollIntoView();
+        cy.get('footer [href="/our-network"]').scrollIntoView();
     }
 
     scrollToEmailInput(){
-        this.getEmailInput.scrollIntoView();
+        cy.get('[id="email"]').scrollIntoView();
     }
 
     clickOurNetworkButton(){
-        this.getOurNetworkButton.click();
+        cy.get('footer [href="/our-network"]').click();
     }
 
     scollToGlobalCoverageButton(){
-        this.getGlobalCoverageButton.scrollIntoView();
+        cy.get('footer [href="/global-coverage"]').scrollIntoView();
     }
 
     clickGlobalCoverageButton(){
-        this.getGlobalCoverageButton.click();
-    }
-
-    scrollToEdgeButton(){
-        this.getEdgeButton.scrollIntoView();
-    }
-
-    clickToEdgeButton(){
-        this.getEdgeButton.click();
+        cy.get('footer [href="/global-coverage"]').click();
     }
 
     scrollToExploreText(){
-        this.getExploreText.scrollIntoView();
+        cy.get('[action="/sign-up"]').scrollIntoView();
     }
 
     clickAcceptCookies(){
-        this.getAcceptCookies.click();
+        cy.get('[id="onetrust-accept-btn-handler"]').click();
     }
 
     clickSolutionsButton(){
-        this.getSolutionsButton.click();
+        cy.get('[href="/solutions"]').first().click();
     }
 
     clickContactUsButton(){
-        this.getContactUsButton.first().click();
+        cy.get('[href="/contact-us"]').first().click();
     }
 
     clickSignUpButton(){
-        this.getSignUpButton.click();
+        cy.get('[id="header-sign-up"]').click();
     }
 
     fillEmailInput(email){
-        this.getEmailInput.type(email);
+        cy.get('[id="email"]').type(email);
     }
 
     clickBottomSignUpButton(){
-        this.getBottomSignUpButton.click();
+        cy.get('[action="/sign-up"] button').first().click();
     }
 
     scrollToTelnyxVSTwilioButton(){
-        this.getTelnyxVSTwilioButton.scrollIntoView();
+        cy.get('[href="/the-better-twilio-alternative"]').scrollIntoView();
     }
 
     clickTelnyxVSTwilioButton(){
-        this.getTelnyxVSTwilioButton.click();
+        cy.get('[href="/the-better-twilio-alternative"]').click();
     }
 
 }

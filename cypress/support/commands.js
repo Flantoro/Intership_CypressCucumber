@@ -27,5 +27,6 @@
 // 	//visit
 // 	cy.visit(urlAddress);
 // 	//accept cookies
+import "cypress-real-events";
 // 	cy.get("#onetrust-accept-btn-handler").click();
 // });

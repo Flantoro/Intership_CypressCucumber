@@ -5,31 +5,6 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   })
 
 class SignUpPage{
-    
-    
-    get getEmailInput(){
-        return cy.get('[id="email"]');
-    }
-
-    get getFirstNameInput(){
-        return cy.get('[id="first_name"]');
-    }
-
-    get getLastNameInput(){
-        return cy.get('[id="last_name"]');
-    }
-
-    get getPasswordInput(){
-        return cy.get('[id="password"]');
-    }
-
-    get getTermsAndConditionsCheckbox(){
-        return cy.get('[id="terms_and_conditions"]');
-    }
-
-    get getSignUpButton(){
-        return cy.get('[type="submit"]').first();
-    }
 
     get getEmailValidationMessage(){
         return cy.get('[id="email_message"]');
@@ -41,10 +16,6 @@ class SignUpPage{
 
     get getRecaptchaError(){
         return cy.get('[aria-describedby="error"]');
-    }
-
-    get getTermsAndConditionsButton(){
-        return cy.get('[for="terms_and_conditions"] a').first();
     }
 
     get getConditionsTitle(){
@@ -67,38 +38,42 @@ class SignUpPage{
         return cy.get('[id="terms_and_conditions_message"]');
     }
 
+    get getEmailInput(){
+        return cy.get('[id="email"]');
+    }
+
     fillEmailInput(email){
         this.getEmailInput.type(email);
     }
 
     fillFirstNameInput(firstName){
-        this.getFirstNameInput.type(firstName);
+        cy.get('[id="first_name"]').type(firstName);
     }
 
     fillLastNameInput(lastName){
-        this.getLastNameInput.type(lastName);
+        cy.get('[id="last_name"]').type(lastName);
     }
 
     fillPasswordInput(password){
-        this.getPasswordInput.type(password);
+        cy.get('[id="password"]').type(password);
     }
 
     checkTermsAndConditionsCheckbox(){
-        this.getTermsAndConditionsCheckbox.check();
+        cy.get('[id="terms_and_conditions"]').check();
     }
 
     clickSignUpButton(){
-        this.getSignUpButton.click();
+        cy.get('[type="submit"]').first().click();
     }
 
     doubleClickSignUpButton(){
-        this.getSignUpButton.click();
+        cy.get('[type="submit"]').first().click();
         cy.wait(100);
-        this.getSignUpButton.click();
+        cy.get('[type="submit"]').first().click();
     }
 
     clickTermsAndConditionsButton(){
-        this.getTermsAndConditionsButton.invoke('removeAttr', 'target').click();
+        cy.get('[for="terms_and_conditions"] a').first().invoke('removeAttr', 'target').click();
     }
 }
 

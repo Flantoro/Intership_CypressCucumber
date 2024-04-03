@@ -7,16 +7,12 @@ class ContactUsPage{
         return cy.get('[id="Reason_for_Contact__c"]');
     }
 
-    get getSubmitButton(){
-        return cy.get('[type="submit"]');
-    }
-
     get getValidationMessage(){
         return cy.get('[id="ValidMsgReason_for_Contact__c"]');
     }
 
     clickSubmitButton(){
-        this.getSubmitButton.click();
+        cy.get('[type="submit"]').click();
     }
 }
 

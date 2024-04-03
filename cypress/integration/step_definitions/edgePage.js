@@ -32,5 +32,5 @@ When("User scrolls to the Related Articles section", () => {
 });
 
 Then("Related Articles section is visible", () => {
-	EdgePage.getRelatedArticleSection.should('be.visible');
+	EdgePage.getRelatedAcrticlesSection.should('be.visible');
 });

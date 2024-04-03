@@ -3,20 +3,16 @@ class SolutionsPage{
         return cy.get('main h1');
     }
 
-    get getTravelSection(){
-        return cy.get('[alt="Travel destination"]');
-    }
-
     get getTravelMainTitle(){
         return cy.get('main h1');
     }
 
     scrollToTravelSection(){
-        this.getTravelSection.scrollIntoView();
+        cy.get('[alt="Travel destination"]').scrollIntoView();
     }
 
     clickTravelSection(){
-        this.getTravelSection.click();
+        cy.get('[alt="Travel destination"]').click();
     }
 }
 

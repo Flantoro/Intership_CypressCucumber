@@ -15,12 +15,17 @@ When("User clicks SignUp button", () => {
 	MainPage.clickSignUpButton();
 });
 
-When("User scrolls to the Learn About the Edge button", () => {
-	MainPage.scrollToEdgeButton();
+When("User clicks Resources button", () => {
+	MainPage.getResourcesButton.should('be.visible').and('be.enabled');
+	MainPage.clickResourcesButton();
 });
 
-When("User clicks the Learn About the Edge button", () => {
-	MainPage.clickToEdgeButton();
+When("User clicks Blog button", () => {
+	MainPage.clickBlogButton();
+});
+
+When("User clicks Article button", () => {
+	MainPage.clickArticleButton();
 });
 
 When("User clicks Solutions button", () => {
@@ -55,7 +60,7 @@ When("User scrolls to Our Network Features section", () => {
 });
 
 Then("Our Network Features section is visible", () => {
-	MainPage.getOurNetworkFeaturesSection.should('be.visible');
+	MainPage.getOurNetworkFeauresSection.should('be.visible');
 });
 
 // Scenario: Telnyx message price shown on the Talnyx VS Twilio page

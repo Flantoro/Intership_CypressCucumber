@@ -14,3 +14,5 @@
 - Install Cypress using `npm install cypress --save-dev`
 - Run in terminal `npm i` to install all you needed
 - Enter `npm run cy:open` to run tests 
+
+To run Cypress tests in unheadless mode update 'cypress.json' and set the value of the  'header' property to 'true' (currently it set as 'false')

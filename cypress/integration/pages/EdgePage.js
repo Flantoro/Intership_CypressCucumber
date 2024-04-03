@@ -3,36 +3,28 @@ class EdgePage{
         return cy.get('[alt="Kelsie_Anderson"]');
     }
 
-    get getEmailInput(){
-        return cy.get('[id="Email"]');
-    }
-
-    get getSubscribeButton(){
-        return cy.get('[type="submit"]');
-    }
-
     get getSuccesMessage(){
         return cy.get('[class="c-iaFiUj"] p');
     }
 
-    get getRelatedArticleSection(){
+    get getRelatedAcrticlesSection(){
         return cy.get('main section').last();
     }
 
     fillEmailInput(email){
-        this.getEmailInput.type(email);
+        cy.get('[id="Email"]').type(email);
     }
 
     clickSubscribeButton(){
-        this.getSubscribeButton.click();
+        cy.get('[type="submit"]').click();
     }
 
     scrollToEmailInput(){
-        this.getEmailInput.scrollIntoView();
+        cy.get('[id="Email"]').scrollIntoView();
     }
 
     scrollToRelatedArticleSection(){
-        this.getRelatedArticleSection.scrollIntoView();
+       this.getRelatedAcrticlesSection.scrollIntoView();
     }
 }
 
